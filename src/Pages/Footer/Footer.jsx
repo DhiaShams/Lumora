@@ -6,7 +6,6 @@ const Footer = () => {
       <p style={styles.text}>
         ©Copyright GDG MACE. All Rights Reserved.
         <br />
-        Designed by Team LUMORA.
       </p>
     </footer>
   );
