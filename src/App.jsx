@@ -163,13 +163,13 @@ function App() {
               }}
             />
             <div className="container mx-auto px-6 h-full flex items-center justify-center">
-              <div className="max-w-4xl w-full bg-white/90 backdrop-blur-sm rounded-xl p-8 shadow-lg">
+              <div className="max-w-4xl w-full bg-white/30 backdrop-blur-md rounded-xl p-8 shadow-lg">
                 <About />
               </div>
             </div>
           </section>
           
-          <section id="timeline" className="relative" style={{ minHeight: '100vh' }}>
+          <section id="timeline" className="relative" style={{ minHeight: '85vh', marginTop: '-10vh' }}>
             <div
               className="absolute inset-0 -z-10"
               style={{
@@ -181,13 +181,13 @@ function App() {
               }}
             />
             <div className="container mx-auto px-6 h-full flex items-center justify-center">
-              <div className="max-w-4xl w-full bg-white/90 backdrop-blur-sm rounded-xl p-8 shadow-lg">
+              <div className="max-w-4xl w-full bg-white/30 backdrop-blur-md rounded-xl p-8 shadow-lg">
                 <Timeline />
               </div>
             </div>
           </section>
           
-          <section id="faq" className="relative" style={{ minHeight: '100vh' }}>
+          <section id="faq" className="relative" style={{ minHeight: '85vh', marginTop: '-6vh' }}>
             <div
               className="absolute inset-0 -z-10"
               style={{
@@ -199,7 +199,7 @@ function App() {
               }}
             />
             <div className="container mx-auto px-6">
-              <div className="max-w-4xl mx-auto bg-white/90 backdrop-blur-sm rounded-xl p-8 shadow-lg">
+              <div className="max-w-4xl mx-auto bg-white/30 backdrop-blur-md rounded-xl p-8 shadow-lg">
                 <FAQ />
               </div>
             </div>
