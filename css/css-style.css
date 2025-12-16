@@ -301,14 +301,14 @@ button:focus {
 	background-color: #ff68ca;
 }
 .yellow_bg {
-	background-color: #ffca69;
+	background-color: #d4f5d0; /* soft light green instead of yellow */
 }
 .blue_bg,
 .v_royal_blue {
-	background-color: #f0f078;
+	background-color: #223422; /* darker green base for sections like FAQ */
 }
 .blue_dark_bg {
-	background-color: #e8e862;
+	background-color: #8fbf7a; /* medium green replacing dark yellow tone */
 }
 .purple_bg {
 	background-color: #6000b5;
@@ -337,16 +337,18 @@ button:focus {
     z-index: 5;
 }
 .gradient_box {
-	background: -webkit-linear-gradient(left, #ff67cb 0%,#ffcc67 99%) !important;
-	background: linear-gradient(to right, #ff67cb 0%,#ffcc67 99%) !important;
+	/* keep pink accent but replace yellow with green */
+	background: -webkit-linear-gradient(left, #ff67cb 0%, #8fbf7a 99%) !important;
+	background: linear-gradient(to right, #ff67cb 0%, #8fbf7a 99%) !important;
 }
 .gradient_box2 {
-	background: -moz-linear-gradient(180deg, rgba(240,240,120,1) 0%, rgba(232,232,98,1) 50%, rgba(240,240,120,1) 100%); /* ff3.6+ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(240,240,120,1)), color-stop(50%, rgba(232,232,98,1)), color-stop(100%, rgba(240,240,120,1))); /* safari4+,chrome */
-	background: -webkit-linear-gradient(180deg, rgba(240,240,120,1) 0%, rgba(232,232,98,1) 50%, rgba(240,240,120,1) 100%); /* safari5.1+,chrome10+ */
-	background: -o-linear-gradient(180deg, rgba(240,240,120,1) 0%, rgba(232,232,98,1) 50%, rgba(240,240,120,1) 100%); /* opera 11.10+ */
-	background: -ms-linear-gradient(180deg, rgba(240,240,120,1) 0%, rgba(232,232,98,1) 50%, rgba(240,240,120,1) 100%); /* ie10+ */
-	background: linear-gradient(270deg, rgba(240,240,120,1) 0%, rgba(232,232,98,1) 50%, rgba(240,240,120,1) 100%); /* w3c */ 
+	/* darker green gradient (used on hero/timeline background) */
+	background: -moz-linear-gradient(180deg, rgba(40,65,40,1) 0%, rgba(34,52,34,1) 50%, rgba(21,33,21,1) 100%); /* ff3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(40,65,40,1)), color-stop(50%, rgba(34,52,34,1)), color-stop(100%, rgba(21,33,21,1))); /* safari4+,chrome */
+	background: -webkit-linear-gradient(180deg, rgba(40,65,40,1) 0%, rgba(34,52,34,1) 50%, rgba(21,33,21,1) 100%); /* safari5.1+,chrome10+ */
+	background: -o-linear-gradient(180deg, rgba(40,65,40,1) 0%, rgba(34,52,34,1) 50%, rgba(21,33,21,1) 100%); /* opera 11.10+ */
+	background: -ms-linear-gradient(180deg, rgba(40,65,40,1) 0%, rgba(34,52,34,1) 50%, rgba(21,33,21,1) 100%); /* ie10+ */
+	background: linear-gradient(270deg, rgba(40,65,40,1) 0%, rgba(34,52,34,1) 50%, rgba(21,33,21,1) 100%); /* w3c */ 
 }
 .section_gradiant {
 	background: -webkit-linear-gradient(to bottom, rgba(32,18,111,1) 0%,rgba(5,45,133,1) 100%);
@@ -464,7 +466,7 @@ button:focus {
 	top: 0;
 	width: 51%;
 	height: 100%;
-	background-color: #f7f765;
+	background-color: #8fbf7a; /* mid green instead of yellow */
 	z-index: 999;
 	-webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
 	-moz-transform: translateX(0); 
@@ -521,7 +523,7 @@ button:focus {
 }
 .v_blue_light #loader-wrapper .loader-section,
 .v_royal_blue #loader-wrapper .loader-section {
-	background-color: #e8e862;
+	background-color: #3f5c3a; /* darker army green for loader panels */
 }
 .v_light_purple #loader-wrapper .loader-section {
 	background-color: #4e0094;
@@ -1099,6 +1101,8 @@ header {
 	height: 110px;
 	padding: 25px 50px;
 	transition: all 0.4s ease 0s;
+	/* Match footer gradient */
+	background: linear-gradient(135deg, #5f8c5a 0%, #3f5c3a 50%, #2e422a 100%);
 }
 .hb_box_shadow {
 	box-shadow: 0 0 1px rgba(255,255,255,0.3);
@@ -1110,6 +1114,35 @@ header {
 	margin: 0;
 	padding: 0;
 }
+/* Mobile hamburger button */
+header .navbar-toggler {
+	border-color: rgba(229,247,224,0.6);
+	color: #e5f7e0;
+}
+header .navbar-toggler:focus {
+	outline: none;
+	box-shadow: 0 0 0 2px rgba(229,247,224,0.4);
+}
+header .navbar-toggler .ion-android-menu {
+	color: #e5f7e0; /* light mint/greenish white that fits the green theme */
+	font-size: 26px;
+	display: block;
+}
+header .navbar-toggler .ion-close {
+	display: none;
+	color: #e5f7e0;
+	font-size: 26px;
+}
+header.active .navbar-toggler .ion-android-menu {
+	display: none;
+}
+header.active .navbar-toggler .ion-close {
+	display: block;
+}
+header .navbar-toggler:hover .ion-android-menu,
+header .navbar-toggler:hover .ion-close {
+	color: #4CAF50; /* green accent on hover */
+}
 
 .modal-open header.fixed-top {
 	padding: 5px 0 !important;
@@ -1117,7 +1150,7 @@ header {
 .nav-fixed,
 header.active,
 .spop {
-	background-color: #f7f765;
+	background: linear-gradient(135deg, #5f8c5a 0%, #3f5c3a 50%, #2e422a 100%);
 	box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 header.nav-fixed {
@@ -1144,7 +1177,7 @@ header .navbar-nav a {
 header a:hover,
 .navbar-nav li a.active,
 .navbar-nav .dropdown-menu li.active a {
-	color: #ff69c9;
+	color: #4CAF50; /* green accent */
 }
 .navbar-expand-lg .navbar-nav .nav-link {
 	padding: 15px 0;
@@ -1163,10 +1196,10 @@ header a:hover,
     margin: 15px 0;
 }
 .navbar-expand-lg .navbar-nav > li > .nav-link.active:before {
-	background-color: #ff69c9;
+	background-color: #4CAF50; /* green accent */
 	bottom: 10px;
 	content: "";
-	height: 1px;
+	height: 2px;
 	left: 0;
 	position: absolute;
 	right: 0;
@@ -1198,7 +1231,7 @@ header a:hover,
 	width: auto;
 }
 .navbar-nav .dropdown-menu {
-	background-color: #f7f765;
+	background-color: #304a30; /* dark green for mobile / hamburger dropdown */
 	border: 0;
 	border-radius: 0;
 	margin: 0;
@@ -1221,12 +1254,12 @@ header a:hover,
 	text-transform:capitalize;
 }
 .navbar-expand-lg .navbar-nav .dropdown-item:hover {
-	color:#ff69c9;
+	color:#4CAF50; /* green accent */
 }
 .navbar-expand-lg .navbar-nav .dropdown-item.active,
 .navbar-expand-lg .navbar-nav .dropdown.show > a {
 	background-color: transparent;
-	color:#ff69c9;
+	color:#4CAF50; /* green accent */
 }
 .lng_dropdown .dd.ddcommon {
 	cursor:pointer;
@@ -1318,7 +1351,7 @@ header a:hover,
 .v_royal_blue .navbar-nav .dropdown-menu,
 .v_royal_blue .lng_dropdown .ddChild,
 .v_royal_blue .spop   {
-	background-color: #e8e862;
+	background-color: #304a30; /* match dark green navbar when using royal_blue theme */
 }
 .v_light_purple .nav-fixed, 
 .v_light_purple header.active,
@@ -1469,7 +1502,7 @@ header a:hover,
 .tk_counter_inner .progress, 
 .tk_counter_inner .progress-bar {
 	border-radius: 20px;
-	color: #fafa8e;
+	color: #e5f7e0; /* soft light green text instead of pale yellow */
 	font-size: 14px;
 	text-align: right;
 }
@@ -1477,8 +1510,8 @@ header a:hover,
 	padding-right: 12px;
 }
 .tk_counter_inner .progress {
-	background-color: transparent;
-	border: 1px solid #fff;
+	background-color: rgba(0, 0, 0, 0.18); /* subtle dark overlay instead of pure white feel */
+	border: 1px solid rgba(255, 255, 255, 0.35); /* softer border */
 	height: 23px;
 	margin-bottom: 40px;
 	margin-top: 50px;
@@ -1486,7 +1519,7 @@ header a:hover,
 	position: relative;
 }
 .tk_counter_inner .progress-bar {
-	background: #fff;
+	background: linear-gradient(90deg, #6fa66a 0%, #a4d39a 100%); /* green fill instead of solid white */
     font-weight: 600;
 }
 .token_box .progress-bar-success {
@@ -3032,7 +3065,7 @@ text-align: justify;
 	background-color: rgba(18, 24, 51, 0.9);
 }
 .v_royal_blue .banner_inner  .tk_countdown {
-	background-color: rgba(232, 232, 98, 0.9);
+	background-color: rgba(116, 148, 96, 0.9);
 }
 .v_light_purple .tk_countdown {
     background-image: -webkit-linear-gradient(left, #6000b5 0%,#3e2a9c 99%);
@@ -5160,7 +5193,7 @@ text-align: justify;
 13. FOOTER SECTION
 *===================================*/
 #footer{
-	background:#e0e056;
+	background:#3f5c3a;
 
 }
 .top_footer {
