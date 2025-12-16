@@ -20,6 +20,9 @@ function App() {
         <HeroWithClouds />
       </section>
 
+      {/* Spacer between Hero and About */}
+      <div className="relative z-10" style={{ height: '1px', marginTop: '-1px' }}></div>
+
       {/* Background Decorative Elements */}
       <div className="fixed inset-0 pointer-events-none -z-0">
         {/* Large Blue Circle - Top Left */}
@@ -148,7 +151,7 @@ function App() {
       <div className="relative">
 
         <div className="relative z-10">
-          <section id="about" className="relative" style={{ minHeight: '100vh' }}>
+          <section id="about" className="relative pt-16" style={{ minHeight: '100vh' }}>
             <div
               className="absolute inset-0 -z-10"
               style={{

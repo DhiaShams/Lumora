@@ -30,6 +30,38 @@ const FAQ = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  // Array of different color classes for each FAQ item with specified colors (more translucent)
+  const colorVariants = [
+    // Red: #f50e40
+    'hover:border-[#f50e40]/10 hover:bg-[#f50e40]/5 group-hover:border-[#f50e40]/15',
+    // Blue: #420ef5
+    'hover:border-[#420ef5]/10 hover:bg-[#420ef5]/5 group-hover:border-[#420ef5]/15',
+    // Yellow: #f5da0e
+    'hover:border-[#f5da0e]/15 hover:bg-[#f5da0e]/5 group-hover:border-[#f5da0e]/20',
+    // Green: #21b924
+    'hover:border-[#21b924]/10 hover:bg-[#21b924]/5 group-hover:border-[#21b924]/15',
+    // Grey: #808080
+    'hover:border-[#808080]/10 hover:bg-[#808080]/5 group-hover:border-[#808080]/15',
+  ];
+  
+  // Text colors for each item
+  const textColors = [
+    'group-hover:text-[#f50e40]',     // Red
+    'group-hover:text-[#420ef5]',     // Blue
+    'group-hover:text-[#f5da0e]',     // Yellow
+    'group-hover:text-[#21b924]',     // Green
+    'group-hover:text-[#808080]',     // Grey
+  ];
+
+  // Function to get color class based on index
+  const getColorClass = (index) => {
+    const colorIndex = index % colorVariants.length;
+    return {
+      bgClass: colorVariants[colorIndex],
+      textClass: textColors[colorIndex]
+    };
+  };
+
   return (
     <div id="faq" className="pb-8 md:pb-12">
       <h2 className="text-3xl font-bold text-center mb-8 md:mb-10">FAQ</h2>
@@ -38,20 +70,22 @@ const FAQ = () => {
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="bg-white/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow transition-all duration-200 border border-gray-100 overflow-hidden"
+            className={`bg-white/10 backdrop-blur-md rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 border border-white/20 overflow-hidden group ${getColorClass(index).bgClass}`}
           >
             <button
               onClick={() => toggleFAQ(index)}
-              className="w-full px-4 py-3 sm:px-5 sm:py-4 text-left flex items-center justify-between hover:bg-white/60 transition-colors duration-200"
+              className="w-full px-4 py-3 sm:px-5 sm:py-4 text-left flex items-center justify-between transition-all duration-300 group-hover:bg-white/10"
             >
-              <span className="font-semibold text-gray-800 pr-4">
+              <span
+                className={`font-semibold text-gray-800 pr-4 transition-colors duration-300 ${getColorClass(index).textClass}`}
+              >
                 {faq.question}
               </span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className={`h-5 w-5 text-gray-600 flex-shrink-0 transition-transform duration-300 ${
+                className={`h-5 w-5 text-gray-600 flex-shrink-0 transition-all duration-300 ${
                   openIndex === index ? "transform rotate-180" : ""
-                }`}
+                } ${getColorClass(index).textClass}`}
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -69,7 +103,7 @@ const FAQ = () => {
                 openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
               }`}
             >
-              <div className="px-4 py-3 sm:px-5 sm:py-4 text-xs sm:text-sm text-gray-600 border-t border-gray-100">
+              <div className="px-4 py-3 sm:px-5 sm:py-4 text-xs sm:text-sm text-gray-200 border-t border-white/10 group-hover:border-white/20 transition-colors duration-300">
                 {faq.answer}
               </div>
             </div>
