@@ -2,11 +2,10 @@ import { useState } from "react";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import gdg from "../../assets/gdg2.png";
 
-const Navbar = ({ theme = 'system', onSetTheme = () => { } }) => {
+const Navbar = ({ theme = 'light', onSetTheme = () => { } }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const prefersDark = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const effectiveIsDark = theme === 'dark' || (theme === 'system' && prefersDark);
+  const effectiveIsDark = theme === 'dark';
 
   const handleToggleTheme = () => {
     onSetTheme(effectiveIsDark ? 'light' : 'dark');
