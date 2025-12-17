@@ -15,7 +15,7 @@ const About = () => {
 
       {/* Combined About Section */}
       <section className="mb-10">
-        <p className="mt-4 text-sm text-gray-700 dark:text-gray-300">
+        <p className="mt-4 text-sm text-gray-600 dark:text-gray-100">
           GDG On Campus – Mar Athanasius College of Engineering is a vibrant
           community of innovators, designers, and developers driven by
           curiosity and collaboration. The chapter emphasizes learning by
