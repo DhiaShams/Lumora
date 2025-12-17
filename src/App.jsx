@@ -190,7 +190,7 @@ function App() {
                 filter: 'brightness(0.9)'
               }}
             />
-            <div className="container mx-auto px-6 h-full flex items-center justify-center">
+            <div className="container mx-auto px-6 h-full flex items-start justify-center pt-12">
               <div className="max-w-4xl w-full bg-white/30 dark:bg-neutral-900/40 backdrop-blur-md rounded-xl p-8 shadow-lg">
                 <About />
               </div>
@@ -208,7 +208,7 @@ function App() {
                 filter: 'brightness(0.9)'
               }}
             />
-            <div className="container mx-auto px-6 h-full flex items-center justify-center">
+            <div className="container mx-auto px-6 h-full flex items-start justify-center pt-12">
               <div className="max-w-4xl w-full bg-white/30 dark:bg-neutral-900/40 backdrop-blur-md rounded-xl p-8 shadow-lg">
                 <Timeline />
               </div>
