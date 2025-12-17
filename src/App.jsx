@@ -179,7 +179,7 @@ function App() {
       <div className="relative">
 
         <div className="relative z-10">
-          <section id="about" className="relative pt-16" style={{ minHeight: '100vh' }}>
+          <section id="about" className="relative pt-12" style={{ minHeight: '85vh' }}>
             <div
               className="absolute inset-0 -z-10"
               style={{
@@ -197,7 +197,7 @@ function App() {
             </div>
           </section>
           
-          <section id="timeline" className="relative" style={{ minHeight: '85vh', marginTop: '0' }}>
+          <section id="timeline" className="relative pt-12" style={{ minHeight: '85vh' }}>
             <div
               className="absolute inset-0 -z-10"
               style={{
@@ -215,7 +215,7 @@ function App() {
             </div>
           </section>
           
-          <section id="faq" className="relative" style={{ minHeight: '85vh', marginTop: '0' }}>
+          <section id="faq" className="relative pt-12" style={{ minHeight: '85vh' }}>
             <div
               className="absolute inset-0 -z-10"
               style={{
@@ -226,8 +226,8 @@ function App() {
                 filter: 'brightness(0.9)'
               }}
             />
-            <div className="container mx-auto px-6">
-              <div className="max-w-4xl mx-auto bg-white/30 dark:bg-neutral-900/40 backdrop-blur-md rounded-xl p-8 shadow-lg">
+            <div className="container mx-auto px-6 h-full flex items-start justify-center pt-12">
+              <div className="max-w-4xl w-full bg-white/30 dark:bg-neutral-900/40 backdrop-blur-md rounded-xl p-8 shadow-lg">
                 <FAQ />
               </div>
             </div>
