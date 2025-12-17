@@ -1,21 +1,21 @@
 import React from "react";
 
 const StatCard = ({ title, subtitle, children }) => (
-  <div className="flex flex-col items-center text-center bg-white/60 backdrop-blur-md p-4 rounded-xl shadow-md w-40">
+  <div className="flex flex-col items-center text-center bg-white/60 dark:bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-md w-40">
     <div className="mb-2">{children}</div>
-    <div className="text-sm font-semibold">{title}</div>
-    <div className="text-xs text-gray-600">{subtitle}</div>
+    <div className="text-sm font-semibold dark:text-gray-100">{title}</div>
+    <div className="text-xs text-gray-600 dark:text-gray-300">{subtitle}</div>
   </div>
 );
 
 const About = () => {
   return (
     <>
-      <h2 className="text-3xl font-extrabold mb-10 text-center">ABOUT</h2>
+      <h2 className="text-3xl font-extrabold mb-10 text-center text-gray-900 dark:text-gray-100">ABOUT</h2>
 
       {/* Combined About Section */}
       <section className="mb-10">
-        <p className="mt-4 text-sm text-gray-700">
+        <p className="mt-4 text-sm text-gray-700 dark:text-gray-300">
           GDG On Campus – Mar Athanasius College of Engineering is a vibrant
           community of innovators, designers, and developers driven by
           curiosity and collaboration. The chapter emphasizes learning by
@@ -31,7 +31,7 @@ const About = () => {
 
       {/* Participation Details */}
       <section className="mb-10">
-        <h4 className="font-bold mb-6 text-center">
+        <h4 className="font-bold mb-6 text-center text-gray-900 dark:text-gray-100">
           PARTICIPATION DETAILS
         </h4>
         <div className="flex justify-center gap-6 flex-wrap">
