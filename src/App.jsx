@@ -197,7 +197,7 @@ function App() {
             </div>
           </section>
           
-          <section id="timeline" className="relative" style={{ minHeight: '85vh', marginTop: '-10vh' }}>
+          <section id="timeline" className="relative" style={{ minHeight: '85vh', marginTop: '0' }}>
             <div
               className="absolute inset-0 -z-10"
               style={{
@@ -215,7 +215,7 @@ function App() {
             </div>
           </section>
           
-          <section id="faq" className="relative" style={{ minHeight: '85vh', marginTop: '-6vh' }}>
+          <section id="faq" className="relative" style={{ minHeight: '85vh', marginTop: '0' }}>
             <div
               className="absolute inset-0 -z-10"
               style={{
