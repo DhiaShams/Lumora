@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import Navbar from './Pages/Navbar/Navbar.jsx';
 import HeroWithClouds from './Pages/Hero/Hero';
 import About from './Pages/About/About';
@@ -7,15 +8,42 @@ import Footer from './Pages/Footer/Footer.jsx';
 import CustomCursor from './components/CustomCursor';
 
 function App() {
+  const [theme, setTheme] = useState(() => {
+    try {
+      return localStorage.getItem('theme') || 'system';
+    } catch (e) {
+      return 'system';
+    }
+  });
+
+  // Determine whether dark should be active (effective theme)
+  const prefersDark = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const effectiveIsDark = theme === 'dark' || (theme === 'system' && prefersDark);
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (effectiveIsDark) root.classList.add('dark');
+    else root.classList.remove('dark');
+  }, [effectiveIsDark]);
+
+  const setThemePreference = (newPref) => {
+    setTheme(newPref);
+    try {
+      localStorage.setItem('theme', newPref);
+    } catch (e) {}
+  };
+
+  const backgroundStyle = effectiveIsDark
+    ? { background: 'linear-gradient(135deg, #071022 0%, #071a2b 30%, #0b1020 65%, #071022 100%)' }
+    : { background: 'linear-gradient(135deg, #bfffe0 0%, #dcfff4 30%, #e6ebff 65%, #dff3ff 100%)' };
+
   return (
     <div
       className="min-h-screen relative overflow-x-hidden cursor-none"
-      style={{
-        background: 'linear-gradient(135deg, #bfffe0 0%, #dcfff4 30%, #e6ebff 65%, #dff3ff 100%)'
-      }}
+      style={backgroundStyle}
     >
       <CustomCursor />
-      <Navbar />
+      <Navbar theme={theme} onSetTheme={setThemePreference} />
       <section id="home" className="relative z-10">
         <HeroWithClouds />
       </section>
