@@ -33,12 +33,11 @@ textarea,
 [contenteditable] {
   caret-color: var(--cursor-blue);
 }
-
 /* Gradient Bridge - Smooth transition between hero and content sections */
 .gradient-bridge {
   position: relative;
-  height: 20px;
-  margin-top: -10px;
+  height: 8px;        /* Reduced from 12px */
+  margin-top: -4px;   /* Adjusted overlap to match new height */
   pointer-events: none;
   z-index: 15;
 }
@@ -51,17 +50,21 @@ textarea,
   right: 0;
   bottom: 0;
   background: radial-gradient(
-    rgba(223, 239, 239, 0) 0%,
-    rgba(223, 239, 239, 0.05) 100%
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.05) 100%
   );
   backdrop-filter: blur(36px);
   -webkit-backdrop-filter: blur(36px);
 }
 
-/* Use the same soft bridge for all themes — image is bright so one gradient suffices */
+.dark .gradient-bridge {
+  display: none;
+}
+
+/* Mobile adjustments */
 @media (max-width: 640px) {
   .gradient-bridge {
-    height: 40px;
-    margin-top: -20px;
+    height: 15px;      /* Reduced from 20px */
+    margin-top: -8px;
   }
 }

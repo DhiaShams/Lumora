@@ -113,9 +113,6 @@ const HeroWithClouds = () => {
           <span className="text-gray-800"> . </span>
           <span className="text-red-600">ILLUMINATE</span>
         </div>
-        <button className="px-10 py-4 bg-blue-500 text-white text-lg rounded-full hover:bg-blue-600 transition-all shadow-lg">
-          Get Started
-        </button>
         {/* <DevfolioButton /> */}
       </div>
       

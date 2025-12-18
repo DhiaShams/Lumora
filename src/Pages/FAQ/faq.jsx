@@ -34,8 +34,8 @@ const FAQ = () => {
   const colorVariants = [
     // Red: #f50e40
     'hover:border-[#f50e40]/10 hover:bg-[#f50e40]/5 group-hover:border-[#f50e40]/15',
-    // Blue: #420ef5
-    'hover:border-[#420ef5]/10 hover:bg-[#420ef5]/5 group-hover:border-[#420ef5]/15',
+    // Blue: #2e4debff
+    'hover:border-[#2e4debff]/10 hover:bg-[#2e4debff]/5 group-hover:border-[#2e4debff]/15',
     // Yellow: #f5da0e
     'hover:border-[#f5da0e]/15 hover:bg-[#f5da0e]/5 group-hover:border-[#f5da0e]/20',
     // Green: #21b924

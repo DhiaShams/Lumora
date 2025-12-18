@@ -10,7 +10,7 @@ const colorVariants = [
 
 const textColors = [
   'group-hover:text-[#f50e40]',
-  'group-hover:text-[#420ef5]',
+  'group-hover:text-[#2b5bd6]',
   'group-hover:text-[#f5da0e]',
   'group-hover:text-[#21b924]',
   'group-hover:text-[#808080]',

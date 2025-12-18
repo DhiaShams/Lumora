@@ -10,8 +10,8 @@ const statColors = [
     text: 'group-hover:text-[#f50e40]',
   },
   {
-    bg: 'hover:border-[#420ef5]/15 hover:bg-[#420ef5]/5',
-    text: 'group-hover:text-[#420ef5]',
+    bg: 'hover:border-[#2b5bd6]/15 hover:bg-[#2b5bd6]/5',
+    text: 'group-hover:text-[#2b5bd6]',
   },
   {
     bg: 'hover:border-[#21b924]/15 hover:bg-[#21b924]/5',
