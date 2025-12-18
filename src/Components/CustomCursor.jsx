@@ -3,37 +3,41 @@ import '../styles/cursor.css';
 
 const CustomCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [isVisible, setIsVisible] = useState(true);
+  const [enabled, setEnabled] = useState(true);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    // Only enable on devices that support hover (i.e., not touch-only devices)
+    const supportsHover = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(hover: hover)').matches;
+    setEnabled(!!supportsHover);
+  }, []);
+
+  useEffect(() => {
+    if (!enabled) return;
+    const updatePosition = (e) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
 
-    const handleMouseEnter = () => setIsVisible(true);
-    const handleMouseLeave = () => setIsVisible(false);
-
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseenter', handleMouseEnter);
-    document.addEventListener('mouseleave', handleMouseLeave);
+    window.addEventListener('mousemove', updatePosition);
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseenter', handleMouseEnter);
-      document.removeEventListener('mouseleave', handleMouseLeave);
+      window.removeEventListener('mousemove', updatePosition);
     };
-  }, []);
+  }, [enabled]);
 
-  if (!isVisible) return null;
+  if (!enabled) return null;
 
   return (
-    <div 
-      className="cursor-dot"
+    <div
+      className="custom-cursor"
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
       }}
-    />
+    >
+      <div className="cursor-glow" />
+      <div className="cursor-outer-ring" />
+      <div className="cursor-core" />
+    </div>
   );
 };
 
