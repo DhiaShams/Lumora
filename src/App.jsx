@@ -51,8 +51,8 @@ function App() {
         <HeroWithClouds />
       </section>
 
-      {/* Spacer between Hero and About */}
-      <div className="relative z-10" style={{ height: '1px', marginTop: '-1px' }}></div>
+      {/* Gradient Bridge - Soft fade between hero and content */}
+      <div className="gradient-bridge"></div>
 
       <div className="relative">
 
