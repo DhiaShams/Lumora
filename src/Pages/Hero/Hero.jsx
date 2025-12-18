@@ -113,7 +113,7 @@ const HeroWithClouds = () => {
           <span className="text-gray-800"> . </span>
           <span className="text-red-600">ILLUMINATE</span>
         </div>
-        {/* <DevfolioButton /> */}
+        <DevfolioButton />
       </div>
       
       {/* Cloud Animations */}

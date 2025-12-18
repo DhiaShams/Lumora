@@ -14,10 +14,10 @@ const DevfolioButton = () => {
 
     return (
         <div
-            class="apply-button"
-            data-hackathon-slug="Lumora"
+            className="apply-button" 
+            data-hackathon-slug="LUMORA" 
             data-button-theme="light"
-            style="height: 44px; width: 312px"
+            style={{ height: '44px', width: '312px' }}
         ></div>
     );
 };
