@@ -30,12 +30,38 @@ const getColorClass = (index) => {
 
 const Timeline = () => {
   const events = [
-    { id: 1, date: "20 Dec 2025", title: "Registration Live", description: "Registration opens for all participants." },
-    { id: 2, date: "22 Dec 2025", title: "Prize Pool Reveal", description: "Exciting prizes will be announced." },
-    { id: 3, date: "30 Dec 2025", title: "Sponsors Announcement", description: "Meet our amazing sponsors." },
-    { id: 4, date: "20 Jan 2026", title: "Registration Close", description: "Last day to register for the event." },
-    { id: 5, date: "31 Jan 2026", title: "Event Live", description: "The hackathon officially begins!" },
-  ];
+  {
+    id: 1,
+    date: "20 Dec 2025",
+    title: "Registration Live",
+    description: "Registrations open for all participants."
+  },
+  {
+    id: 2,
+    date: "20 Jan 2026",
+    title: "Registration Close",
+    description: "Last date to complete your registration."
+  },
+  {
+    id: 3,
+    date: "27 Jan 2026",
+    title: "Shortlisted Teams Announced",
+    description: "Selected teams will be officially announced."
+  },
+  {
+    id: 4,
+    date: "31 Jan 2026",
+    title: "Hackathon Live",
+    description: "The hackathon officially begins."
+  },
+  {
+    id: 5,
+    date: "01 Feb 2026",
+    title: "Hackathon Ends",
+    description: "Final submissions and closing of the hackathon."
+  },
+];
+
 
   return (
     <section className="py-10">
