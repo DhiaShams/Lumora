@@ -47,7 +47,7 @@ const FAQ = () => {
   // Text colors for each item
   const textColors = [
     'group-hover:text-[#f50e40]',     // Red
-    'group-hover:text-[#420ef5]',     // Blue
+    'group-hover:text-[#1a80e6ff]',     // Blue
     'group-hover:text-[#f5da0e]',     // Yellow
     'group-hover:text-[#21b924]',     // Green
     'group-hover:text-[#808080]',     // Grey

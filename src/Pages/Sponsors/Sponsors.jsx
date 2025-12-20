@@ -1,18 +1,18 @@
 import React from "react";
-import devfolio from "../../assets/Devfolio_Logo-Black.png";
-import ethindia from "../../assets/ethindia-dark.png";
+import devfolioDark from "../../assets/Devfolio_Logo-White.png";
+import devfolioLight from "../../assets/Devfolio_Logo-Black.png";
+import ethindiaDark from "../../assets/ethindia-light.png";
+import ethindiaLight from "../../assets/ethindia-dark.png";
 
 const sponsors = [
   {
-    src: devfolio,
-    alt: "DEVFOLIO LOGO",
+    name: "Devfolio",
     link: "https://devfolio.co",
     hover:
       "hover:border-[#808080]/15 hover:bg-[#808080]/5 group-hover:border-[#808080]/20",
   },
   {
-    src: ethindia,
-    alt: "ETHINDIA LOGO",
+    name: "ETHIndia",
     link: "https://ethindia.co",
     hover:
       "hover:border-[#2e4deb]/15 hover:bg-[#2e4deb]/5 group-hover:border-[#2e4deb]/20",
@@ -47,11 +47,37 @@ const Sponsors = () => {
                 ${logo.hover}
               `}
             >
-              <img
-                src={logo.src}
-                alt={logo.alt}
-                className="w-40 h-14 md:h-20 object-contain transition-transform duration-300 group-hover:scale-105"
-              />
+              {/* DEVFOLIO */}
+              {logo.name === "Devfolio" && (
+                <>
+                  <img
+                    src={devfolioLight}
+                    alt="DEVFOLIO LOGO"
+                    className="block dark:hidden w-40 h-14 md:h-20 object-contain"
+                  />
+                  <img
+                    src={devfolioDark}
+                    alt="DEVFOLIO LOGO"
+                    className="hidden dark:block w-40 h-14 md:h-20 object-contain"
+                  />
+                </>
+              )}
+
+              {/* ETHINDIA */}
+              {logo.name === "ETHIndia" && (
+                <>
+                  <img
+                    src={ethindiaLight}
+                    alt="ETHINDIA LOGO"
+                    className="block dark:hidden w-40 h-14 md:h-20 object-contain"
+                  />
+                  <img
+                    src={ethindiaDark}
+                    alt="ETHINDIA LOGO"
+                    className="hidden dark:block w-40 h-14 md:h-20 object-contain"
+                  />
+                </>
+              )}
             </a>
           ))}
         </div>
