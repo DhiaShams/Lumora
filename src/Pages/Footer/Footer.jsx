@@ -10,7 +10,7 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Instagram, url: 'https://www.instagram.com/dsc_mace/', label: 'Instagram' },
+    { icon: Instagram, url: 'https://www.instagram.com/gdgoncampus_mace/', label: 'Instagram' },
     { icon: Linkedin, url: 'https://www.linkedin.com/company/gdgmaceoncampus/', label: 'LinkedIn' },
     { icon: FaWhatsapp, url: 'https://chat.whatsapp.com/HfLqLarHMzlKgvVBkLdsQm?mode=hqrt3', label: 'WhatsApp' }
   ];
