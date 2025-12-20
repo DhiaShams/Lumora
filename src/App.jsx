@@ -12,15 +12,14 @@ import Sponsors from './Pages/Sponsors/Sponsors.jsx';
 function App() {
   const [theme, setTheme] = useState(() => {
     try {
-      return localStorage.getItem('theme') || 'system';
+      return localStorage.getItem('theme') || 'light';
     } catch (e) {
       console.log('Error', e);
+      return 'light';
     }
   });
 
-  // Determine whether dark should be active (effective theme)
-  const prefersDark = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const effectiveIsDark = theme === 'dark' || (theme === 'system' && prefersDark);
+  const effectiveIsDark = theme === 'dark';
 
   useEffect(() => {
     const root = document.documentElement;
