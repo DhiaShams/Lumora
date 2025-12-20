@@ -7,13 +7,14 @@ import FAQ from './Pages/FAQ/faq.jsx';
 import Footer from './Pages/Footer/Footer.jsx';
 import CustomCursor from './Components/CustomCursor';
 import fullBg from "./assets/full.jpg";
+import Sponsors from './Pages/Sponsors/Sponsors.jsx';
 
 function App() {
   const [theme, setTheme] = useState(() => {
     try {
       return localStorage.getItem('theme') || 'system';
     } catch (e) {
-      console.log('Error',e);
+      console.log('Error', e);
     }
   });
 
@@ -32,7 +33,7 @@ function App() {
     try {
       localStorage.setItem('theme', newPref);
     } catch (e) {
-      console.log('Error',e);
+      console.log('Error', e);
     }
   };
 
@@ -74,7 +75,7 @@ function App() {
               </div>
             </div>
           </section>
-          
+
           <section id="timeline" className="relative pt-12" style={{ minHeight: '85vh' }}>
             <div
               className="absolute inset-0 -z-10"
@@ -86,13 +87,33 @@ function App() {
                 filter: 'brightness(0.9)'
               }}
             />
-            <div className="container mx-auto px-6 h-full flex items-start justify-center pt-12">
+            <div className="container mx-auto px-6 h-full flex items-start justify-center pt-2">
               <div className="max-w-4xl w-full bg-white/30 dark:bg-neutral-900/40 backdrop-blur-md rounded-xl p-8 shadow-lg">
                 <Timeline />
               </div>
             </div>
           </section>
-          
+
+          <section id="sponsors" className="relative pt-12" style={{ minHeight: '70vh' }}>
+            <div
+              className="absolute inset-0 -z-10"
+              style={{
+                backgroundImage: `url(${fullBg})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundAttachment: 'fixed',
+                filter: 'brightness(0.9)'
+              }}
+            />
+
+            <div className="container mx-auto px-6 h-full flex items-start justify-center pt-12">
+              <div className="max-w-4xl w-full bg-white/30 dark:bg-neutral-900/40 backdrop-blur-md rounded-xl p-8 shadow-lg">
+                <Sponsors />
+              </div>
+            </div>
+          </section>
+
+
           <section id="faq" className="relative pt-8" style={{ minHeight: '65vh' }}>
             <div
               className="absolute inset-0 -z-10"
@@ -104,7 +125,7 @@ function App() {
                 filter: 'brightness(0.9)'
               }}
             />
-            <div className="container mx-auto px-6 h-full flex items-start justify-center pt-8">
+            <div className="container mx-auto px-6 h-full flex items-start justify-center pt-4">
               <div className="max-w-4xl w-full bg-white/30 dark:bg-neutral-900/40 backdrop-blur-md rounded-xl p-8 shadow-lg">
                 <FAQ />
               </div>
@@ -112,7 +133,7 @@ function App() {
           </section>
 
           {/* small gap so we can see background image below FAQ before footer */}
-          <section className="relative h-36">
+          <section className="relative h-32">
             <div
               className="absolute inset-0 -z-10"
               style={{

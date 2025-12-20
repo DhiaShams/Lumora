@@ -23,6 +23,7 @@ const Navbar = ({ theme = 'light', onSetTheme = () => { } }) => {
     { label: "HOME", id: "home", color: "#21b924" },
     { label: "ABOUT", id: "about", color: "#f50e40" },
     { label: "TIMELINE", id: "timeline", color: "#420ef5" },
+    { label: "SPONSORS", id: "sponsors", color: "#bd32b2ff" },
     { label: "FAQ", id: "faq", color: "#f5da0e" }
   ];
 
