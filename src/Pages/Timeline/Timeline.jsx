@@ -32,7 +32,7 @@ const Timeline = () => {
   const events = [
   {
     id: 1,
-    date: "20 Dec 2025",
+    date: "To be announced soon",
     title: "Registration Live",
     description: "Registrations open for all participants."
   },
