@@ -102,11 +102,11 @@ const HeroWithClouds = () => {
         <img
           src={titleImage}
           alt="Lumora"
-          className="w-full max-w-3xl mb-10 md:mb-14"
+          className="w-full max-w-3xl mb-6 md:mb-10"
         />
 
         {/* Caption */}
-        <div className="text-4xl font-bold tracking-wider mb-12 md:mb-16">
+        <div className="text-3xl font-bold tracking-wider mb-12 md:mb-16">
           <span className="text-green-600">DESIGN</span>
           <span className="text-gray-800"> . </span>
           <span className="text-orange-500">INNOVATE</span>
