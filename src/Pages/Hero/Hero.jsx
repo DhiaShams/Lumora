@@ -106,13 +106,24 @@ const HeroWithClouds = () => {
         />
 
         {/* Caption */}
-        <div className="text-3xl font-bold tracking-wider mb-12 md:mb-16">
-          <span className="text-green-600">DESIGN</span>
-          <span className="text-gray-800"> . </span>
-          <span className="text-orange-500">INNOVATE</span>
-          <span className="text-gray-800"> . </span>
-          <span className="text-red-600">ILLUMINATE</span>
+        <div className="text-3xl font-bold tracking-wider mb-12 md:mb-16 leading-tight">
+          <span className="block md:inline text-green-600">
+            DESIGN
+          </span>
+
+          <span className="hidden md:inline text-gray-800 mx-2">.</span>
+
+          <span className="block md:inline text-orange-500">
+            INNOVATE
+          </span>
+
+          <span className="hidden md:inline text-gray-800 mx-2">.</span>
+
+          <span className="block md:inline text-red-600">
+            ILLUMINATE
+          </span>
         </div>
+
         <div className="mt-2 md:mt-4">
           <DevfolioButton />
         </div>
