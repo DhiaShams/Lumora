@@ -6,9 +6,9 @@ import DevfolioButton from '../../Components/DevfolioButton';
 const HeroWithClouds = () => {
   return (
     <div className="relative w-full h-screen overflow-hidden">
-      
+
       {/* Background Image */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: `url(${bgImage})`,
@@ -17,14 +17,14 @@ const HeroWithClouds = () => {
           backgroundRepeat: 'no-repeat',
         }}
       />
-      
+
       {/* Optional: Add a slight overlay if image is too busy */}
       <div className="absolute inset-0 bg-white/10" />
-      
+
       {/* CLOUD LAYERS - Now with blur */}
       <div className="absolute inset-0">
         {/* Cloud 1 - Pale Green */}
-        <div 
+        <div
           className="absolute w-80 h-40 bg-emerald-100/90 rounded-full"
           style={{
             top: '8%',
@@ -34,9 +34,9 @@ const HeroWithClouds = () => {
             animation: 'moveRight1 18s ease-in-out infinite'
           }}
         />
-        
+
         {/* Cloud 2 - Blue soft */}
-        <div 
+        <div
           className="absolute w-72 h-36 bg-blue-200/90 rounded-full"
           style={{
             top: '25%',
@@ -46,9 +46,9 @@ const HeroWithClouds = () => {
             animation: 'moveLeft1 15s ease-in-out infinite'
           }}
         />
-        
+
         {/* Cloud 3 - Yellow soft */}
-        <div 
+        <div
           className="absolute w-64 h-32 bg-yellow-100/90 rounded-full"
           style={{
             top: '45%',
@@ -58,9 +58,9 @@ const HeroWithClouds = () => {
             animation: 'moveRight2 20s ease-in-out infinite'
           }}
         />
-        
+
         {/* Cloud 4 - White soft (Moved to bottom) */}
-        <div 
+        <div
           className="absolute w-76 h-38 bg-white/95 rounded-full"
           style={{
             bottom: '10%',
@@ -70,9 +70,9 @@ const HeroWithClouds = () => {
             animation: 'moveLeft2 18s ease-in-out infinite'
           }}
         />
-        
+
         {/* Cloud 5 - Blue soft */}
-        <div 
+        <div
           className="absolute w-68 h-34 bg-blue-200/95 rounded-full"
           style={{
             top: '60%',
@@ -82,9 +82,9 @@ const HeroWithClouds = () => {
             animation: 'moveRight3 19s ease-in-out infinite'
           }}
         />
-        
+
         {/* Cloud 6 - Yellow soft */}
-        <div 
+        <div
           className="absolute w-60 h-30 bg-yellow-200/95 rounded-full"
           style={{
             top: '38%',
@@ -95,27 +95,30 @@ const HeroWithClouds = () => {
           }}
         />
       </div>
-      
+
       {/* Hero Content */}
       <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4">
         {/* Title Image */}
-        <img 
-          src={titleImage} 
-          alt="Lumora" 
-          className="w-full max-w-3xl mb-6"
+        <img
+          src={titleImage}
+          alt="Lumora"
+          className="w-full max-w-3xl mb-10 md:mb-14"
         />
-        
+
         {/* Caption */}
-        <div className="text-4xl font-bold tracking-wider mb-8">
+        <div className="text-4xl font-bold tracking-wider mb-12 md:mb-16">
           <span className="text-green-600">DESIGN</span>
           <span className="text-gray-800"> . </span>
           <span className="text-orange-500">INNOVATE</span>
           <span className="text-gray-800"> . </span>
           <span className="text-red-600">ILLUMINATE</span>
         </div>
-        <DevfolioButton />
+        <div className="mt-2 md:mt-4">
+          <DevfolioButton />
+        </div>
+
       </div>
-      
+
       {/* Cloud Animations */}
       <style>{`
         @keyframes moveRight1 {
