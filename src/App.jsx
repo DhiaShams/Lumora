@@ -8,6 +8,7 @@ import Footer from './Pages/Footer/Footer.jsx';
 import CustomCursor from './Components/CustomCursor';
 import fullBg from "./assets/full.jpg";
 import Sponsors from './Pages/Sponsors/Sponsors.jsx';
+import PrizePool from './Pages/PrizePool/PrizePool.jsx';
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -75,7 +76,7 @@ function App() {
             </div>
           </section>
 
-          <section id="timeline" className="relative pt-12" style={{ minHeight: '85vh' }}>
+          <section id="timeline" className="relative pt-12 pb-20" style={{ minHeight: '85vh' }} >
             <div
               className="absolute inset-0 -z-10"
               style={{
@@ -93,7 +94,26 @@ function App() {
             </div>
           </section>
 
-          <section id="sponsors" className="relative pt-12" style={{ minHeight: '70vh' }}>
+          <section id="prize-pool" className="relative pt-12" style={{ minHeight: '60vh' }}>
+            <div
+              className="absolute inset-0 -z-10"
+              style={{
+                backgroundImage: `url(${fullBg})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundAttachment: 'fixed',
+                filter: 'brightness(0.9)'
+              }}
+            />
+            <div className="container mx-auto px-6 h-full flex items-start justify-center pt-8">
+              <div className="max-w-4xl w-full bg-white/30 dark:bg-neutral-900/40 backdrop-blur-md rounded-xl p-10 pb-14 shadow-lg">
+                <PrizePool />
+              </div>
+            </div>
+          </section>
+
+
+          <section id="sponsors" className="relative pt-6 md:pt-8" style={{ minHeight: '60vh' }}>
             <div
               className="absolute inset-0 -z-10"
               style={{
@@ -105,7 +125,7 @@ function App() {
               }}
             />
 
-            <div className="container mx-auto px-6 h-full flex items-start justify-center pt-12">
+            <div className="container mx-auto px-6 h-full flex items-start justify-center pt-6">
               <div className="max-w-4xl w-full bg-white/30 dark:bg-neutral-900/40 backdrop-blur-md rounded-xl p-8 shadow-lg">
                 <Sponsors />
               </div>
